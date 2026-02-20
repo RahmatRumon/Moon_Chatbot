@@ -1,0 +1,5 @@
+streamlit
+groq
+pyTelegramBotAPI
+requests
+python-dotenv
