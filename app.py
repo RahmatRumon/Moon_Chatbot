@@ -5,9 +5,9 @@ from groq import Groq
 import threading
 import os
 
-GROQ_API_KEY = st.secrets["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"]
-TELEGRAM_BOT_TOKEN = st.secrets["8320724315:AAGN0Zh5aMpotmLSYfo_v6WFiR_RF_xkNMk"]
-GIST_RAW_URL = st.secrets["https://gist.githubusercontent.com/RahmatRumon/45b4dcd54ab117c618d70c70ea84c102/raw/school_data.json"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+TELEGRAM_BOT_TOKEN = st.secrets["TELEGRAM_BOT_TOKEN"]
+GIST_RAW_URL = st.secrets["GIST_RAW_URL"]
 
 groq_client = Groq(api_key=GROQ_API_KEY)
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
@@ -76,4 +76,5 @@ def main():
         st.session_state.messages.append({"role": "assistant", "content": response})
 
 if __name__ == "__main__":
+
     main()
