@@ -37,7 +37,7 @@ def get_ai_response(user_query):
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, "স্বাগতম! আমি আপনার স্কুলের তথ্য দিয়ে সাহায্য করতে পারি। আপনার প্রশ্ন লিখুন।")
+    bot.reply_to(message, "স্বাগতম! আমি বিদ্যালয়ের তথ্য প্রদানকারী বট মুন (Moon)। আপনাকে স্কুলের যেকোনো তথ্য দিয়ে সাহায্য করতে পারি। আপনার প্রশ্নটি লিখুন...")
 
 @bot.message_handler(func=lambda message: True)
 def handle_all_messages(message):
@@ -78,4 +78,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
