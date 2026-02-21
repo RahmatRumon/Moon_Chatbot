@@ -25,7 +25,7 @@ def get_ai_response(user_query):
     system_prompt = f"তুমি একটি স্কুল অ্যাসিস্ট্যান্ট বট। নিচের তথ্যের ভিত্তিতে উত্তর দাও: {school_info}"
     
     completion = groq_client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_query}
@@ -78,3 +78,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
